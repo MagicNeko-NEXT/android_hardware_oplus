@@ -20,8 +20,8 @@ cc_defaults {
 cc_library_shared {
     name: "libshims_aidl_fingerprint_v2.oplus",
     defaults: ["libshims_aidl_fingerprint.oplus_defaults"],
-    // 必须留在 V2：HAL 是 V2，soong 不接受同进程混用 V2/V4。
-    // 与 framework 的 current 布局差异在 shim 里手工补齐。
+    // Must stay on V2: the HAL is V2, and soong doesn't accept mixing V2/V4 in one process.
+    // Differences from the framework's current layout are filled in by hand in the shim.
     static_libs: ["android.hardware.biometrics.fingerprint-V2-ndk"],
 }
 
